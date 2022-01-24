@@ -16,7 +16,7 @@ const resolvePromisfied = async (
 
 const base = path.dirname(process.argv[1]);
 
-export const nodeModuleCopyOnBundlePlugin = (modules: string[]): Plugin => ({
+const nodeModuleCopyOnBundlePlugin = (modules: string[]): Plugin => ({
   name: 'esbuild-plugin-copy-module-on-bundle',
   setup(build) {
     const opts = build.initialOptions;
@@ -101,3 +101,5 @@ export const nodeModuleCopyOnBundlePlugin = (modules: string[]): Plugin => ({
     );
   },
 });
+
+export default nodeModuleCopyOnBundlePlugin;
